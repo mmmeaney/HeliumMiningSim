@@ -1,0 +1,36 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "CMake Build",
+            "command": "cmake",
+            "args": [
+                "--build",
+                "${workspaceFolder}/build",
+                "--clean-first"
+            ],
+            "group": "build",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Generated task by CMake."
+        },
+        {
+            "type": "shell",
+            "label": "CMake Configure",
+            "command": "cmake",
+            "args": [
+                "-S .",
+                "-B ./build",
+                "-DCMAKE_BUILD_TYPE=Debug",
+                "-DVCPKG_TARGET_TRIPLET=x64-windows",
+                "-DCMAKE_TOOLCHAIN_FILE=C:\\vcpkg\\scripts\\buildsystems\\vcpkg.cmake",
+                "-Wno-dev"
+            ],
+            "problemMatcher": [],
+            "group": "build",
+            "detail": "Generated task by CMake."
+        }
+    ]
+}
